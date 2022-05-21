@@ -23,7 +23,7 @@ export function getScope(context: ParseTree, symbolTable: SymbolTable) {
 
 export function getAllSymbolsOfType<T extends Symbol>(
   scope: ScopedSymbol,
-  type: new (...args: any[]) => T
+  type: new (...args: unknown[]) => T
 ): T[] {
   const symbols = scope.getSymbolsOfType(type);
   let parent = scope.parent;

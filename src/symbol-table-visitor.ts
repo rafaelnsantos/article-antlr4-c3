@@ -31,8 +31,8 @@ export class SymbolTableVisitor
 
   protected withScope<T>(
     tree: ParseTree,
-    type: new (...args: any[]) => ScopedSymbol,
-    args: any[],
+    type: new (...args: unknown[]) => ScopedSymbol,
+    args: unknown[],
     action: () => T
   ): T {
     const scope = this.symbolTable.addNewSymbolOfType(type, this.scope, ...args);
