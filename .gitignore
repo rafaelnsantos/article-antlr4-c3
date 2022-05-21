@@ -7,3 +7,4 @@ out/
 #The parser is automatically generated
 src/parser/
 *.vsix
+grammar/.antlr
